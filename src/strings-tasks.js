@@ -39,7 +39,6 @@ function getStringLength(value) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-// let value = new String('test');
 function isString(value) {
   if (
     typeof value === 'object' &&
@@ -53,17 +52,6 @@ function isString(value) {
   }
   return false;
 }
-// function isString(value) {
-//   if (typeof value === 'object' && value !== null && typeof value.valueOf() === 'string') {
-//     return true;
-//   }
-//   if (typeof value === 'string') {
-//     return true;
-//   }
-//   return false;
-//   // console.log(typeof value)
-// }
-// console.log(isString(value));
 
 /**
  * Returns the result of concatenation of two strings.
@@ -77,8 +65,9 @@ function isString(value) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+  const result = '';
+  return result.concat(value1, value2);
 }
 
 /**
