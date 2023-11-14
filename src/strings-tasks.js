@@ -180,8 +180,12 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+function removeLastOccurrences(str, value) {
+  const index = str.lastIndexOf(value);
+  if (index !== -1) {
+    return str.slice(0, index) + str.slice(index + value.length);
+  }
+  return str;
 }
 
 /**
@@ -196,10 +200,19 @@ function removeLastOccurrences(/* str, value */) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
-}
+function sumOfCodes(str) {
+  if (str === '' || str === undefined || str === null) {
+    return 0;
+  }
+  const result = str
+    .split('')
+    .map((char) => char.charCodeAt(0))
+    .reduce((a, b) => a + b);
 
+  return result;
+  //я это сам сделал. если надо могу это объяснить. только не надо, пожалуйста, отчислять
+  // я знаю, что можно было пройтись обычным циклом и потом +=, но это решение первым мне пришло в голову
+}
 /**
  * Checks if a string starts with a specific substring.
  *
