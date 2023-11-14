@@ -210,8 +210,6 @@ function sumOfCodes(str) {
     .reduce((a, b) => a + b);
 
   return result;
-  //я это сам сделал. если надо могу это объяснить. только не надо, пожалуйста, отчислять
-  // я знаю, что можно было пройтись обычным циклом и потом +=, но это решение первым мне пришло в голову
 }
 /**
  * Checks if a string starts with a specific substring.
@@ -224,10 +222,9 @@ function sumOfCodes(str) {
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith(str, substr) {
+  return str.startsWith(substr);
 }
-
 /**
  * Checks if a string ends with a specific substring.
  *
