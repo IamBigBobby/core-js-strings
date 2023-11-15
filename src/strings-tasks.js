@@ -283,9 +283,11 @@ function reverseString(str) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-function orderAlphabetically(/* str */) {
-  throw new Error('Not implemented');
+// let str = 'abc123xyz';
+function orderAlphabetically(str) {
+  return str.split('').sort().join('');
 }
+// console.log(orderAlphabetically(str));
 
 /**
  * Checks if a given string contains a specified substring.
