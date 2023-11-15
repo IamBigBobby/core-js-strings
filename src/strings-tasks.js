@@ -283,12 +283,9 @@ function reverseString(str) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-// let str = 'abc123xyz';
 function orderAlphabetically(str) {
   return str.split('').sort().join('');
 }
-// console.log(orderAlphabetically(str));
-
 /**
  * Checks if a given string contains a specified substring.
  *
@@ -301,8 +298,8 @@ function orderAlphabetically(str) {
  *   containsSubstring('JavaScript is Fun', 'Python') => false
  *   containsSubstring('12345', '34') => true
  */
-function containsSubstring(/* str, substring */) {
-  throw new Error('Not implemented');
+function containsSubstring(str, substring) {
+  return str.includes(substring);
 }
 
 /**
