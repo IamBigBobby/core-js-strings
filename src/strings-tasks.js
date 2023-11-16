@@ -436,10 +436,11 @@ function getStringFromTemplate(firstName, lastName) {
  *   extractNameFromTemplate('Hello, John Doe!') => 'John Doe'
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
-function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+function extractNameFromTemplate(value) {
+  const arrValue = value.replace('!', '').split(' ');
+  arrValue.shift();
+  return arrValue.join(' ');
 }
-
 /**
  * Remove the first and last angle brackets from tag string
  *
