@@ -358,10 +358,16 @@ function isPalindrome(str) {
  *   findLongestWord('A long and winding road') => 'winding'
  *   findLongestWord('No words here') => 'words'
  */
-function findLongestWord(/* sentence */) {
-  throw new Error('Not implemented');
+function findLongestWord(sentence) {
+  const arrSentence = sentence.split(' ');
+  let longestWord = '';
+  for (let i = 0; i < arrSentence.length; i += 1) {
+    if (arrSentence[i].length > longestWord.length) {
+      longestWord = arrSentence[i];
+    }
+  }
+  return longestWord;
 }
-
 /**
  * Returns the string where each word is reversed.
  *
